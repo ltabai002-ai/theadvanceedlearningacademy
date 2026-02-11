@@ -93,7 +93,7 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm">
-                  GS Road, Near Ganeshguri, Guwahati, Assam 781006
+                  House no. 15/B, MC Road, Chenikuthi, Opp. St. Mary's HS School, Guwahati 781003, Assam
                 </span>
               </li>
               <li className="flex items-center space-x-3">

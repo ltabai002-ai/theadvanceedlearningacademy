@@ -29,8 +29,9 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Our Address</h3>
                     <p className="text-gray-600">
-                      GS Road, Near Ganeshguri,<br />
-                      Guwahati, Assam 781006
+                      House no. 15/B, MC Road, Chenikuthi,<br />
+                      Opp. St. Mary's HS School, Guwahati<br />
+                      781003, Assam
                     </p>
                   </div>
                 </div>
@@ -144,7 +145,7 @@ export default function ContactPage() {
           <div className="mt-6 bg-white rounded-xl p-6 shadow-sm">
             <h3 className="font-semibold text-gray-900 mb-2">How to Reach Us</h3>
             <p className="text-gray-600">
-              Our center is located on GS Road near Ganeshguri, easily accessible by public transport. The nearest landmarks are Ganeshguri Police Station and Dispur Last Gate. You can take city buses or auto-rickshaws from any part of Guwahati.
+              Our center is located on MC Road in Chenikuthi, opposite St. Mary's HS School, easily accessible by public transport. You can take city buses or auto-rickshaws from any part of Guwahati.
             </p>
           </div>
         </div>
