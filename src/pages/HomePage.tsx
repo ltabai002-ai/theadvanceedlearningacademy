@@ -64,45 +64,49 @@ export default function HomePage() {
 
   return (
     <div>
-      <section className="relative bg-gradient-to-br from-primary to-primary-dark text-white py-16 md:py-24 overflow-visible">
-        <div className="absolute inset-0 overflow-hidden">
-          <ShaderBackground />
+      <section className="relative text-black py-20 md:py-32 overflow-hidden min-h-[600px] md:min-h-[700px]">
+        <div className="absolute inset-0">
+          <img
+            src="/student-image.png"
+            alt="Student learning online"
+            className="w-full h-full object-cover object-right"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/98 via-white/90 to-white/40"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-                Crack Govt Exams in Guwahati with Expert-Led Coaching
-              </h1>
-              <p className="text-xl md:text-2xl text-white/95 font-medium">
-                RRB NTPC | SSC CGL | SSC CHSL | Banking Exams
-              </p>
-              <p className="text-lg text-white/90">
-                Structured classroom programs with small batch size, weekly tests and personalized mentoring.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="bg-secondary text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#004BB8] transition-all hover:shadow-lg flex items-center justify-center space-x-2">
-                  <Download className="w-5 h-5" />
-                  <span>Download Brochure</span>
-                </button>
-                <Link to="/contact" className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-[#004BB8] hover:text-white transition-all hover:shadow-lg flex items-center justify-center space-x-2">
-                  <Calendar className="w-5 h-5" />
-                  <span>Book Free Demo Class</span>
-                </Link>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+          <div className="max-w-2xl space-y-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+              Crack Govt Exams in Guwahati with Expert-Led Coaching
+            </h1>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg md:text-xl text-gray-800 font-medium">
+                  RRB NTPC | SSC CGL | SSC CHSL | Banking Exams
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg md:text-xl text-gray-800">
+                  Structured classroom programs with small batch size
+                </p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <p className="text-lg md:text-xl text-gray-800">
+                  Weekly tests and personalized mentoring
+                </p>
               </div>
             </div>
-
-            <div className="relative z-20 flex items-center justify-center">
-              <img
-                src="/student-image.png"
-                alt="Confident student preparing for government exams"
-                className="w-full h-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
-                style={{
-                  filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.4)) drop-shadow(0 10px 20px rgba(0,0,0,0.2))',
-                  maxWidth: '90%',
-                  margin: '0 auto'
-                }}
-              />
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all hover:shadow-xl flex items-center justify-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>Download Brochure</span>
+              </button>
+              <Link to="/contact" className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all hover:shadow-xl flex items-center justify-center space-x-2">
+                <Calendar className="w-5 h-5" />
+                <span>Book Free Demo Class</span>
+              </Link>
             </div>
           </div>
         </div>
