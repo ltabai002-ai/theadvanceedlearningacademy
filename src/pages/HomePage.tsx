@@ -288,9 +288,9 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Attend a Free Demo Class This Week and experience our teaching methodology
             </p>
-            <button className="bg-gradient-to-r from-primary to-primary-dark text-white px-12 py-5 rounded-xl font-semibold hover:bg-[#004BB8] hover:shadow-xl transition-all text-lg transform hover:-translate-y-1">
+            <Link to="/contact" className="inline-block bg-gradient-to-r from-primary to-primary-dark text-white px-12 py-5 rounded-xl font-semibold hover:bg-[#004BB8] hover:shadow-xl transition-all text-lg transform hover:-translate-y-1">
               Register for Free Demo
-            </button>
+            </Link>
           </div>
         </div>
       </section>
