@@ -73,7 +73,7 @@ export default function TabbedCourseSection() {
                   <button
                     key={category}
                     onClick={() => setSelectedCategory(category)}
-                    className={`w-full text-left px-6 py-4 rounded-xl transition-all font-medium text-lg ${
+                    className={`w-full text-left px-6 py-4 rounded-xl transition-all font-satoshi font-normal text-base leading-[26px] ${
                       selectedCategory === category
                         ? 'bg-blue-600 text-white shadow-md'
                         : 'text-gray-700 hover:bg-gray-100'

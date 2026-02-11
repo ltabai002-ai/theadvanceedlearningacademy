@@ -23,6 +23,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         heading: ['Inter', 'system-ui', 'sans-serif'],
+        satoshi: ['Satoshi', 'sans-serif'],
       },
     },
   },
