@@ -44,11 +44,11 @@ const courses: Course[] = [
 const categories = ['RRB', 'SSC', 'Banking'];
 
 export default function TabbedCourseSection() {
-  const [selectedCategory, setSelectedCategory] = useState('SSC');
+  const [selectedCategory, setSelectedCategory] = useState('Most Popular');
 
-  const filteredCourses = courses.filter(
-    (course) => course.category === selectedCategory
-  );
+  const filteredCourses = selectedCategory === 'Most Popular'
+    ? courses
+    : courses.filter((course) => course.category === selectedCategory);
 
   return (
     <section className="py-16 md:py-20 bg-gray-50">
@@ -64,25 +64,30 @@ export default function TabbedCourseSection() {
 
         <div className="flex flex-col lg:flex-row gap-8">
           <div className="lg:w-80 flex-shrink-0">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="bg-blue-600 text-white px-6 py-4">
-                <h3 className="text-lg font-bold">Most Popular</h3>
-              </div>
-              <div className="p-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`w-full text-left px-6 py-4 rounded-xl transition-all font-satoshi font-normal text-base leading-[26px] ${
-                      selectedCategory === category
-                        ? 'bg-blue-600 text-white shadow-md'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden p-2">
+              <button
+                onClick={() => setSelectedCategory('Most Popular')}
+                className={`w-full text-left px-6 py-4 rounded-xl transition-all font-satoshi font-normal text-base leading-[26px] ${
+                  selectedCategory === 'Most Popular'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                Most Popular
+              </button>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`w-full text-left px-6 py-4 rounded-xl transition-all font-satoshi font-normal text-base leading-[26px] ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
             </div>
           </div>
 
