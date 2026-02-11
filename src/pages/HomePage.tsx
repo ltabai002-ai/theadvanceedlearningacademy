@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import {
   Users,
+  BookOpen,
   ClipboardCheck,
   UserCheck,
   MapPin,
