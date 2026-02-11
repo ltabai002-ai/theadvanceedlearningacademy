@@ -48,7 +48,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="tel:+919999999999"
+              href="tel:+916002346625"
               className="flex items-center space-x-2 bg-secondary text-white px-6 py-2.5 rounded-lg font-medium hover:bg-secondary-dark transition-colors"
             >
               <Phone className="w-4 h-4" />
@@ -83,7 +83,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="tel:+919999999999"
+              href="tel:+916002346625"
               className="flex items-center justify-center space-x-2 bg-secondary text-white px-6 py-3 rounded-lg font-medium hover:bg-secondary-dark transition-colors"
             >
               <Phone className="w-4 h-4" />

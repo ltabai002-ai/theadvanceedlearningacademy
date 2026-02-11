@@ -41,8 +41,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+919999999999" className="text-gray-600 hover:text-primary">
-                      +91 99999 99999
+                    <a href="tel:+916002346625" className="text-gray-600 hover:text-primary">
+                      +91 6002346625
                     </a>
                     <br />
                     <a href="tel:+918888888888" className="text-gray-600 hover:text-primary">
@@ -57,8 +57,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:info@advancedlearningacademy.com" className="text-gray-600 hover:text-primary">
-                      info@advancedlearningacademy.com
+                    <a href="mailto:theadvancedlearning26@gmail.com" className="text-gray-600 hover:text-primary">
+                      theadvancedlearning26@gmail.com
                     </a>
                     <br />
                     <a href="mailto:admissions@advancedlearningacademy.com" className="text-gray-600 hover:text-primary">
