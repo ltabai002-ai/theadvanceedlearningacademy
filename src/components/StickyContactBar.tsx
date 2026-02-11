@@ -1,15 +1,29 @@
 import { Phone, MessageCircle } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CallbackModal from './CallbackModal';
 import ChatBot from './ChatBot';
 
 export default function StickyContactBar() {
   const [showCallbackModal, setShowCallbackModal] = useState(false);
   const [showChatBot, setShowChatBot] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white shadow-lg border-t border-gray-200">
+      <div className={`fixed bottom-0 left-0 right-0 z-40 bg-white shadow-lg border-t border-gray-200 transition-transform duration-300 ${isVisible ? 'translate-y-0' : 'translate-y-full'}`}>
         <div className="max-w-7xl mx-auto px-2 py-1.5">
           <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
             <button
@@ -55,6 +69,7 @@ export default function StickyContactBar() {
       <ChatBot
         isOpen={showChatBot}
         onClose={() => setShowChatBot(false)}
+        stickyBarVisible={isVisible}
       />
     </>
   );
