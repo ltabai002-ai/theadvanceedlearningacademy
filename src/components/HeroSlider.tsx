@@ -61,16 +61,17 @@ const slides: Slide[] = [
 export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying || isPaused) return;
     
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 2000); // Changed from 5000ms to 2000ms (2 seconds)
+    }, 5000); // 5 seconds interval
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, [isAutoPlaying, isPaused]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -87,10 +88,22 @@ export default function HeroSlider() {
     setIsAutoPlaying(false);
   };
 
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
+  };
+
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative text-black overflow-hidden min-h-[600px] md:min-h-[700px]">
+    <section 
+      className="relative text-black overflow-hidden min-h-[600px] md:min-h-[700px]"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {/* Background */}
       <div className={`absolute inset-0 bg-gradient-to-br ${slide.bgGradient} lg:block hidden transition-all duration-700`}></div>
 
