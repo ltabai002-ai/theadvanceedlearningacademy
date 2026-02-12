@@ -46,7 +46,7 @@ const slides: Slide[] = [
     id: 3,
     headline: "Your Dream Government Job Starts Here",
     subheadline: "500+ Students Selected in Last Year",
-    personImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
+    personImage: "/student-girl-success.jpg",
     personName: "Top Ranker",
     personRole: "SSC CGL Selected",
     bullets: [
