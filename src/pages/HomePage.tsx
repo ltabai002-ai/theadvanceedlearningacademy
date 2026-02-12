@@ -181,39 +181,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Us
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              What makes us the best choice for your government exam preparation
-            </p>
-          </div>
-
-          <div ref={whyChooseUsAnimation.ref} style={whyChooseUsAnimation.style} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={index}
-                  className="relative group"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/15 to-primary/10 rounded-2xl transform group-hover:scale-105 transition-transform"></div>
-                  <div className="relative bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-                    <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl inline-block mb-4">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <p className="text-gray-800 font-semibold text-lg leading-relaxed">{item.text}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 md:py-24 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
