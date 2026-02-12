@@ -32,7 +32,7 @@ const slides: Slide[] = [
     id: 2,
     headline: "SSC & Railway Exam Preparation That Works",
     subheadline: "95% Success Rate with Proven Methods",
-    personImage: "https://www.genspark.ai/api/files/s/IF7CuENT",
+    personImage: "/woman-success-story.jpg",
     personName: "Success Story",
     personRole: "AIR 247 - RRB NTPC",
     bullets: [
