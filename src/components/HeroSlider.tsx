@@ -151,13 +151,10 @@ export default function HeroSlider() {
 
       {/* Mobile Layout - Simplilearn Design Pattern with 3D Carousel */}
       <div className="lg:hidden min-h-[100vh]">
-        {/* Mobile: 3D Carousel Section with Gradient Background */}
+        {/* Mobile: 3D Carousel Section with White Background */}
         <div 
           key={`mobile-carousel-${slide.id}`}
-          className="relative w-full h-[55vh] min-h-[400px] max-h-[500px] overflow-hidden flex items-center justify-center"
-          style={{
-            background: 'linear-gradient(135deg, rgba(220, 235, 245, 1) 0%, rgba(240, 245, 250, 1) 50%, rgba(255, 255, 255, 1) 100%)'
-          }}
+          className="relative w-full h-[55vh] min-h-[400px] max-h-[500px] overflow-hidden flex items-center justify-center bg-white"
         >
           {/* 3D Carousel Wrapper */}
           <div className="relative w-full h-full flex items-center justify-center [perspective:1000px] px-4">
