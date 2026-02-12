@@ -26,14 +26,16 @@ const courses: Course[] = [
     duration: '6 + 3 Months',
     cohortStart: '15th March 2026',
     slug: 'ssc-cgl',
-    category: 'SSC'
+    category: 'SSC',
+    logo: '/ssc-logo.png'
   },
   {
     name: 'SSC CHSL',
     duration: '6 Months',
     cohortStart: '15th March 2026',
     slug: 'ssc-chsl',
-    category: 'SSC'
+    category: 'SSC',
+    logo: '/ssc-logo.png'
   },
   {
     name: 'Banking Clerical',
