@@ -9,14 +9,12 @@ import {
   TrendingUp,
   Award,
   ChevronRight,
-  Download,
-  Calendar,
-  CheckCircle2,
   Play
 } from 'lucide-react';
 import LeadForm from '../components/LeadForm';
 import ShaderBackground from '../components/ui/shader-background';
 import TabbedCourseSection from '../components/TabbedCourseSection';
+import HeroSlider from '../components/HeroSlider';
 import { useState } from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -74,71 +72,7 @@ export default function HomePage() {
 
   return (
     <div>
-      <section className="relative text-black overflow-hidden min-h-[600px] md:min-h-[700px]">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 lg:block hidden"></div>
-
-        <div className="absolute inset-0 lg:hidden">
-          <div
-            className="absolute inset-0 bg-cover"
-            style={{
-              backgroundImage: "url('/2bcff076-87b2-405a-b4d1-a4287e6f29c7.png')",
-              backgroundPosition: "center top"
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
-        </div>
-
-        <div className="hidden lg:block absolute inset-y-0 right-0 w-1/2">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/2bcff076-87b2-405a-b4d1-a4287e6f29c7.png')",
-              maskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, black 30%)",
-              WebkitMaskImage: "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, black 30%)"
-            }}
-          />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[600px] md:min-h-[700px]">
-          <div className="grid lg:grid-cols-2 gap-8 items-end lg:items-center h-full">
-            <div className="flex flex-col justify-end lg:justify-center space-y-6 py-8 lg:py-4 pb-12 lg:pb-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-                Crack Govt Exams in Guwahati with Expert-Led Coaching
-              </h1>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg md:text-xl text-gray-800 font-medium">
-                    RRB NTPC | SSC CGL | SSC CHSL | Banking Exams
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg md:text-xl text-gray-800">
-                    Structured classroom programs with small batch size
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                  <p className="text-lg md:text-xl text-gray-800">
-                    Weekly tests and personalized mentoring
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-dark transition-all hover:shadow-xl flex items-center justify-center space-x-2">
-                  <Download className="w-5 h-5" />
-                  <span>Download Brochure</span>
-                </button>
-                <Link to="/contact" className="bg-white text-primary border-2 border-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all hover:shadow-xl flex items-center justify-center space-x-2">
-                  <Calendar className="w-5 h-5" />
-                  <span>Book Free Demo Class</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       <section className="py-8 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
