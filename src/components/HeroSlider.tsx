@@ -106,45 +106,98 @@ export default function HeroSlider() {
         ></div>
       </div>
 
-      {/* Mobile Layout - Simplilearn Style */}
-      <div className="lg:hidden">
-        {/* Mobile: Person Image at Top */}
+      {/* Mobile Layout - Simplilearn Design Pattern */}
+      <div className="lg:hidden min-h-[100vh]">
+        {/* Mobile: Person Image Section with Gradient Background */}
         <div 
           key={`mobile-img-${slide.id}`}
-          className="relative w-full h-[55vh] animate-fadeIn"
+          className="relative w-full h-[55vh] min-h-[400px] max-h-[500px] overflow-hidden"
+          style={{
+            background: 'linear-gradient(135deg, rgba(220, 235, 245, 1) 0%, rgba(240, 245, 250, 1) 50%, rgba(255, 255, 255, 1) 100%)'
+          }}
         >
+          {/* Person Image with Fade-In Animation */}
           <img
             src={slide.personImage}
             alt={slide.headline}
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center animate-fadeIn"
+            style={{
+              animation: 'fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards'
+            }}
           />
         </div>
 
-        {/* Mobile: Content Below Image */}
-        <div className="bg-white px-5 py-8 pb-24">
+        {/* Mobile: Content Section - Clean White Background */}
+        <div className="bg-white px-5 py-8 pb-20">
           <div 
             key={`mobile-content-${slide.id}`}
-            className="animate-fadeIn"
+            className="space-y-0"
           >
-            {/* Eyebrow Text */}
-            <p className="text-[15px] font-medium text-gray-700 leading-[1.4] mb-3">
+            {/* Eyebrow Text - Context Label */}
+            <p 
+              className="text-[15px] font-medium leading-[1.4] mb-3 opacity-0"
+              style={{
+                color: '#4A5568',
+                letterSpacing: '-0.01em',
+                animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards'
+              }}
+            >
               {slide.eyebrowText}
             </p>
 
-            {/* Main Heading */}
-            <h1 className="text-[32px] font-bold text-black leading-[1.2] mb-4">
+            {/* Main Headline - Primary Message */}
+            <h1 
+              className="text-[32px] font-bold leading-[1.2] mb-4 opacity-0"
+              style={{
+                color: '#1A202C',
+                letterSpacing: '-0.02em',
+                WebkitFontSmoothing: 'antialiased',
+                animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards'
+              }}
+            >
               {slide.headline}
             </h1>
 
-            {/* Subtext */}
-            <p className="text-[15px] font-normal text-gray-600 leading-[1.5] mb-6">
+            {/* Subtext - Supporting Description */}
+            <p 
+              className="text-[15px] font-normal leading-[1.5] mb-6 opacity-0"
+              style={{
+                color: '#718096',
+                animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards'
+              }}
+            >
               {slide.subtext}
             </p>
 
-            {/* Primary CTA Button - Full Width */}
+            {/* Primary CTA Button - Full Width with Shadow */}
             <Link
               to={slide.ctaLink}
-              className="block w-full bg-[#0d6efd] text-white h-[50px] rounded-lg text-[16px] font-medium hover:bg-blue-700 transition-all duration-300 leading-[50px] text-center"
+              className="block w-full text-white h-[50px] rounded-lg text-[16px] font-medium transition-all duration-300 text-center opacity-0"
+              style={{
+                background: 'linear-gradient(180deg, #0D6EFD 0%, #0A58CA 100%)',
+                letterSpacing: '0.01em',
+                lineHeight: '50px',
+                boxShadow: '0 2px 8px rgba(13, 110, 253, 0.25)',
+                animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#0A58CA';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(13, 110, 253, 0.35)';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'linear-gradient(180deg, #0D6EFD 0%, #0A58CA 100%)';
+                e.currentTarget.style.boxShadow = '0 2px 8px rgba(13, 110, 253, 0.25)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 1px 4px rgba(13, 110, 253, 0.3)';
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = 'translateY(-1px)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(13, 110, 253, 0.35)';
+              }}
             >
               {slide.ctaText}
             </Link>
@@ -204,17 +257,30 @@ export default function HeroSlider() {
         <ChevronRight className="w-6 h-6 text-gray-900" />
       </button>
 
-      {/* Dots Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full">
+      {/* Dots Indicator - Simplilearn Style */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`transition-all rounded-full ${
+            className={`transition-all duration-300 ease-in-out rounded-full cursor-pointer ${
               index === currentSlide
-                ? 'w-8 h-2 bg-blue-600'
-                : 'w-2 h-2 bg-gray-400 hover:bg-gray-600'
+                ? 'w-6 h-2 rounded'
+                : 'w-2 h-2'
             }`}
+            style={{
+              backgroundColor: index === currentSlide ? '#0D6EFD' : '#CBD5E0'
+            }}
+            onMouseEnter={(e) => {
+              if (index !== currentSlide) {
+                e.currentTarget.style.backgroundColor = '#A0AEC0';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (index !== currentSlide) {
+                e.currentTarget.style.backgroundColor = '#CBD5E0';
+              }
+            }}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
