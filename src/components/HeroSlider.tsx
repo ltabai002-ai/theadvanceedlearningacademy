@@ -17,7 +17,7 @@ interface Slide {
 const slides: Slide[] = [
   {
     id: 1,
-    eyebrowText: "Expert-Led Coaching",
+    eyebrowText: "",
     headline: "Crack Government Exams with Confidence",
     subtext: "Join India's leading government exam institute with 15+ years of proven success in RRB NTPC, SSC CGL, SSC CHSL, and Banking exams.",
     personImage: "/2bcff076-87b2-405a-b4d1-a4287e6f29c7.webp",
@@ -33,7 +33,7 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    eyebrowText: "95% Success Rate",
+    eyebrowText: "",
     headline: "SSC & Railway Exam Preparation That Works",
     subtext: "Structured classroom programs with small batch sizes, comprehensive study material, and personalized mentoring from experienced faculty.",
     personImage: "/woman-success-story.webp",
@@ -49,7 +49,7 @@ const slides: Slide[] = [
   },
   {
     id: 3,
-    eyebrowText: "500+ Students Selected",
+    eyebrowText: "",
     headline: "Your Dream Government Job Starts Here",
     subtext: "Small batches of max 20 students for personal attention, full-length mock exams matching actual exam patterns, and expert guidance every step of the way.",
     personImage: "/student-girl-success.webp",
@@ -223,7 +223,7 @@ export default function HeroSlider() {
           >
             {/* Eyebrow Text - Context Label */}
             <p 
-              className="text-[15px] font-medium leading-[1.4] mb-3 opacity-0"
+              className="text-[13px] font-medium leading-[1.4] mb-3 opacity-0"
               style={{
                 color: '#4A5568',
                 letterSpacing: '-0.01em',
@@ -235,7 +235,7 @@ export default function HeroSlider() {
 
             {/* Main Headline - Primary Message */}
             <h1 
-              className="text-[32px] font-bold leading-[1.2] mb-6 opacity-0"
+              className="text-[24px] font-bold leading-[1.2] mb-16 opacity-0"
               style={{
                 color: '#1A202C',
                 letterSpacing: '-0.02em',
@@ -248,7 +248,7 @@ export default function HeroSlider() {
 
             {/* Subtext - Supporting Description */}
             <p 
-              className="text-[15px] font-normal leading-[1.5] mb-8 opacity-0"
+              className="text-[13px] font-normal leading-[1.5] mb-20 opacity-0"
               style={{
                 color: '#718096',
                 animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards'
@@ -260,11 +260,11 @@ export default function HeroSlider() {
             {/* Primary CTA Button - Full Width with Shadow */}
             <Link
               to={slide.ctaLink}
-              className="block w-full text-white h-[50px] rounded-lg text-[16px] font-medium transition-all duration-300 text-center opacity-0"
+              className="block w-full text-white h-[44px] rounded-lg text-[14px] font-medium transition-all duration-300 text-center opacity-0"
               style={{
                 background: 'linear-gradient(180deg, #0D6EFD 0%, #0A58CA 100%)',
                 letterSpacing: '0.01em',
-                lineHeight: '50px',
+                lineHeight: '44px',
                 boxShadow: '0 2px 8px rgba(13, 110, 253, 0.25)',
                 animation: 'fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards'
               }}
